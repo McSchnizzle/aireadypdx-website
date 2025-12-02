@@ -444,7 +444,7 @@ section {
   color: var(--color-white);
   padding: 1rem 0.75rem;
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: top;
   font-weight: 600;
 }
 

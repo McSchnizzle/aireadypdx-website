@@ -289,7 +289,7 @@ function App() {
                   <th>
                     <img src="/images/icons/client-civic.png" alt="Civic & Education" className="industry-icon" />
                     <span>Civic & Education</span>
-                    <small>Schools, Churches, Public Safety</small>
+                    <small>Schools, Churches,<br />Public Safety</small>
                   </th>
                   <th>
                     <img src="/images/icons/client-nonprofit.png" alt="Community Organizations" className="industry-icon" />
