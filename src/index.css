@@ -295,15 +295,62 @@ section {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.hero-badge {
-  display: inline-block;
-  background: var(--color-accent);
+/* Hero Pillars */
+.hero-pillars {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-pillar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   color: var(--color-white);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-size: 0.875rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent);
+}
+
+.hero-pillar span {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Button variations */
+.btn-large {
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-note {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.btn s {
+  opacity: 0.7;
+  margin-right: 0.25rem;
+}
+
+/* Nav CTA button */
+.nav-cta {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
 }
 
 .hero .btn-secondary {
@@ -344,91 +391,350 @@ section {
   color: var(--color-primary);
 }
 
-/* Who We Help Section */
-.who-we-help {
-  background: var(--color-background);
-}
-
-.client-card {
+/* Services & Industries Table Section */
+.services-table-section {
   background: var(--color-white);
-  border-left: 4px solid var(--color-accent);
+  overflow-x: auto;
 }
 
-/* Services Section */
-.services {
-  background: var(--color-white);
+.services-table-wrapper {
+  overflow-x: auto;
+  margin: 0 -1rem;
+  padding: 0 1rem;
 }
 
-.service-card {
-  border-top: 4px solid var(--color-accent);
+.services-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
 }
 
-.service-card h3 {
+.services-table th {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 0.75rem;
+  text-align: center;
+  vertical-align: bottom;
+  font-weight: 600;
+}
+
+.services-table th span {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.services-table th small {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.services-table th.service-header {
+  width: 180px;
+}
+
+.industry-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.services-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-background);
+}
+
+.services-table td.service-name {
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-text);
+  padding-left: 1rem;
+}
+
+.services-table tr.service-category td {
+  background: var(--color-sage);
+  font-weight: 700;
   color: var(--color-primary);
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
 }
 
-/* Approach Section */
+.services-table tr.confidential-category td {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.category-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.services-table .check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-white);
+}
+
+.services-table .check svg {
+  width: 14px;
+  height: 14px;
+}
+
+.services-table tbody tr:hover {
+  background: rgba(43, 187, 173, 0.05);
+}
+
+.services-table tbody tr.service-category:hover {
+  background: var(--color-sage);
+}
+
+.services-table tbody tr.confidential-category:hover {
+  background: var(--color-secondary);
+}
+
+/* Approach Section - Simplified */
 .approach {
   background: var(--color-background);
 }
 
-.phase-timeline {
-  display: flex;
-  flex-direction: column;
+.approach-phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.phase-item {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+.approach-phase {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.phase-number {
-  width: 60px;
-  height: 60px;
-  background: var(--color-accent);
-  color: var(--color-white);
+.phase-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-sage);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-  flex-shrink: 0;
+  margin: 0 auto 1.5rem;
 }
 
-.phase-content {
-  flex: 1;
-}
-
-.phase-content h3 {
+.phase-icon svg {
+  width: 36px;
+  height: 36px;
   color: var(--color-primary);
-  margin-bottom: 0.75rem;
 }
 
-.phase-content ul {
+.approach-phase h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.approach-phase ul {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
-.phase-content li {
-  padding: 0.25rem 0;
+.approach-phase li {
+  padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
   color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-background);
 }
 
-.phase-content li::before {
+.approach-phase li:last-child {
+  border-bottom: none;
+}
+
+.approach-phase li::before {
   content: '→';
   position: absolute;
   left: 0;
   color: var(--color-accent);
 }
 
-/* Free Session Section */
+/* Confidential AI Section */
+.confidential-ai {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.confidential-ai-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.confidential-ai-text {
+  flex: 1;
+}
+
+.confidential-ai h2 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.confidential-ai p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.confidential-ai .btn-secondary {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.confidential-ai .btn-secondary:hover {
+  background: var(--color-white);
+  color: var(--color-secondary);
+}
+
+.confidential-ai-icon {
+  flex-shrink: 0;
+}
+
+.confidential-ai-icon svg {
+  width: 120px;
+  height: 120px;
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+/* Pricing Section - 4 Tiers */
+.pricing {
+  background: var(--color-white);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.pricing .pricing-card {
+  background: var(--color-background);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.pricing .pricing-card.featured {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.pricing .pricing-card.featured h3,
+.pricing .pricing-card.featured .price {
+  color: var(--color-white);
+}
+
+.pricing .pricing-card.featured p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pricing .pricing-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.pricing .price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.pricing .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.pricing .price s {
+  color: var(--color-text-light);
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.pricing .price-note {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.pricing .pricing-card.featured .price-note {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing .pricing-card ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.pricing .pricing-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing .pricing-card li:last-child {
+  border-bottom: none;
+}
+
+.pricing .pricing-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.pricing .pricing-card.featured li::before {
+  color: var(--color-white);
+}
+
+.pricing .pricing-card.featured li {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.pricing .pricing-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Free Session Section - Remove (merged into pricing) */
 .free-session {
-  background: var(--color-sage);
+  display: none;
 }
 
 .free-session-content {
@@ -801,6 +1107,19 @@ section {
   .pricing-card.featured {
     transform: none;
   }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .approach-phases {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .confidential-ai-icon svg {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -852,9 +1171,31 @@ section {
     text-align: center;
   }
 
-  .phase-item {
+  .hero-pillars {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-phases {
+    grid-template-columns: 1fr;
+  }
+
+  .confidential-ai-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .confidential-ai-icon {
+    order: -1;
+  }
+
+  .confidential-ai-icon svg {
+    width: 60px;
+    height: 60px;
   }
 
   .footer-content {

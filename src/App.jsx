@@ -9,6 +9,17 @@ const Icons = {
       <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
     </svg>
   ),
+  MapPin: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </svg>
+  ),
+  Shield: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+  ),
   Briefcase: () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
@@ -19,6 +30,11 @@ const Icons = {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
       <polyline points="22 4 12 14.01 9 11.01"/>
+    </svg>
+  ),
+  Check: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
     </svg>
   ),
   MessageSquare: () => (
@@ -37,6 +53,26 @@ const Icons = {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M18 6 6 18"/>
       <path d="m6 6 12 12"/>
+    </svg>
+  ),
+  Search: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+  ),
+  Settings: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  ),
+  Users: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
     </svg>
   ),
 }
@@ -117,13 +153,12 @@ function App() {
           </a>
           <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
             <li><a href="#why-us" onClick={(e) => scrollToSection(e, 'why-us')}>Why Us</a></li>
-            <li><a href="#who-we-help" onClick={(e) => scrollToSection(e, 'who-we-help')}>Who We Help</a></li>
             <li><a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a></li>
+            <li><a href="#confidential-ai" onClick={(e) => scrollToSection(e, 'confidential-ai')}>Confidential AI</a></li>
+            <li><a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')}>Pricing</a></li>
             <li><a href="#approach" onClick={(e) => scrollToSection(e, 'approach')}>Approach</a></li>
-            <li><a href="#packages" onClick={(e) => scrollToSection(e, 'packages')}>Packages</a></li>
-            <li><a href="#private-ai" onClick={(e) => scrollToSection(e, 'private-ai')}>Private AI</a></li>
             <li><a href="#about" onClick={(e) => scrollToSection(e, 'about')}>About</a></li>
-            <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary">Contact</a></li>
+            <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary nav-cta">Book Your $50 Session</a></li>
           </ul>
           <div className="nav-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <Icons.X /> : <Icons.Menu />}
@@ -135,23 +170,35 @@ function App() {
       <section id="home" className="hero">
         <div className="container">
           <div className="hero-content">
-            <span className="hero-badge">2026: The Year of AI — we help local organizations get ready</span>
-            <h1>Experienced tech leaders for your AI journey.</h1>
+            <h1>Is Your Business Ready for 2026: The Year of AI?</h1>
             <p className="hero-subheading">
-              AI is moving into mainstream adoption. We help Portland-area businesses and nonprofits use it safely and practically — without needing a technical team.
-            </p>
-            <p className="hero-support">
-              Backed by 30 years of building and leading technology companies, we've already been rolling out AI solutions across more than a dozen organizations in the region.
+              AI has moved from bleeding edge to business essential. AI Ready PDX, powered by Vital Enterprises' 30+ years of technology leadership, helps Portland-area businesses adopt AI confidently, practically, and securely.
             </p>
             <div className="hero-buttons">
-              <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary">
-                Book your free December 2025 AI Readiness Session
-              </a>
-              <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className="btn btn-secondary">
-                Explore services
+              <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary btn-large">
+                Book Your AI Readiness Session — <s>$500</s> $50 <span className="btn-note">(First 100 Clients)</span>
               </a>
             </div>
-            <p className="hero-location">Serving Portland and the Pacific Northwest</p>
+            <div className="hero-pillars">
+              <div className="hero-pillar">
+                <div className="pillar-icon">
+                  <Icons.Award />
+                </div>
+                <span>30+ Years Tech Leadership</span>
+              </div>
+              <div className="hero-pillar">
+                <div className="pillar-icon">
+                  <Icons.MapPin />
+                </div>
+                <span>Local Portland Presence</span>
+              </div>
+              <div className="hero-pillar">
+                <div className="pillar-icon">
+                  <Icons.Shield />
+                </div>
+                <span>Privacy-First Options</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -203,226 +250,295 @@ function App() {
         </div>
       </section>
 
-      {/* Who We Help Section */}
-      <section id="who-we-help" className="who-we-help">
+      {/* Services & Industries Table Section */}
+      <section id="services" className="services-table-section">
         <div className="container">
           <div className="section-header">
-            <h2>Who we help</h2>
-            <p>We work with mostly non-technical organizations that want to use AI but don't want to become technology companies.</p>
+            <h2>How We Help Your Industry</h2>
+            <p>AI Ready PDX delivers practical AI solutions tailored to your industry. From marketing to confidential AI deployments, we match the right solutions to your specific needs.</p>
           </div>
-          <div className="grid-5">
-            <div className="card client-card">
-              <h3>Home & field services</h3>
-              <p>Tree services, landscaping, HVAC, plumbing, and similar service businesses looking to improve scheduling, quoting, and follow-up.</p>
+          <div className="services-table-wrapper">
+            <table className="services-table">
+              <thead>
+                <tr>
+                  <th className="service-header"></th>
+                  <th>
+                    <img src="/images/icons/client-home-services.png" alt="Field Services" className="industry-icon" />
+                    <span>Field Services</span>
+                    <small>HVAC, Plumbing, Landscaping</small>
+                  </th>
+                  <th>
+                    <img src="/images/icons/client-food.png" alt="Retail & Hospitality" className="industry-icon" />
+                    <span>Retail & Hospitality</span>
+                    <small>Coffee, Restaurants, Shops</small>
+                  </th>
+                  <th>
+                    <img src="/images/icons/client-professional.png" alt="Professional Practices" className="industry-icon" />
+                    <span>Professional Practices</span>
+                    <small>Dental, Legal, Accounting</small>
+                  </th>
+                  <th>
+                    <span>Civic & Education</span>
+                    <small>Schools, Churches, Public Safety</small>
+                  </th>
+                  <th>
+                    <img src="/images/icons/client-nonprofit.png" alt="Community Organizations" className="industry-icon" />
+                    <span>Community Orgs</span>
+                    <small>Nonprofits</small>
+                  </th>
+                  <th>
+                    <img src="/images/icons/client-manufacturing.png" alt="Manufacturers & Distributors" className="industry-icon" />
+                    <span>Manufacturing</span>
+                    <small>Inventory, Private AI Focus</small>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="service-category">
+                  <td colSpan="7">
+                    <img src="/images/icons/service-marketing.png" alt="Marketing" className="category-icon" />
+                    Marketing & Sales
+                  </td>
+                </tr>
+                <tr>
+                  <td className="service-name">Web presence (SEO, AEO/GEO)</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr>
+                  <td className="service-name">Content & collateral</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr>
+                  <td className="service-name">Outreach (email, voice, social)</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td></td>
+                </tr>
+                <tr className="service-category">
+                  <td colSpan="7">
+                    <img src="/images/icons/service-automation.png" alt="Operations" className="category-icon" />
+                    Operations
+                  </td>
+                </tr>
+                <tr>
+                  <td className="service-name">Scheduling & intake</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr>
+                  <td className="service-name">Inventory & supply chain</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td></td>
+                  <td></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr>
+                  <td className="service-name">Process automation</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr className="service-category">
+                  <td colSpan="7">
+                    <img src="/images/icons/service-strategy.png" alt="Management" className="category-icon" />
+                    Management
+                  </td>
+                </tr>
+                <tr>
+                  <td className="service-name">Dashboards & analytics</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr>
+                  <td className="service-name">Reporting & insights</td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr className="service-category confidential-category">
+                  <td colSpan="7">
+                    <img src="/images/icons/service-data.png" alt="Confidential AI" className="category-icon" />
+                    Confidential AI
+                  </td>
+                </tr>
+                <tr>
+                  <td className="service-name">On-premise deployment</td>
+                  <td></td>
+                  <td></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td></td>
+                  <td></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+                <tr>
+                  <td className="service-name">Private cloud inference</td>
+                  <td></td>
+                  <td></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                  <td></td>
+                  <td><span className="check"><Icons.Check /></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Confidential AI Section */}
+      <section id="confidential-ai" className="confidential-ai">
+        <div className="container">
+          <div className="confidential-ai-content">
+            <div className="confidential-ai-text">
+              <h2>Need to Keep Your AI Off the Public Internet?</h2>
+              <p>
+                For organizations with sensitive data—legal, medical, financial, or proprietary—we offer on-premise and air-gapped solutions where your data never leaves your building. Ask us about Confidential AI options.
+              </p>
+              <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-secondary">
+                Learn About Confidential AI
+              </a>
             </div>
-            <div className="card client-card">
-              <h3>Coffee & food businesses</h3>
-              <p>Roasters, cafes, and food producers that want better customer communication and web presence.</p>
-            </div>
-            <div className="card client-card">
-              <h3>Professional practices</h3>
-              <p>Dental, legal, accounting, and clinic teams looking to streamline intake, reminders, and client communication.</p>
-            </div>
-            <div className="card client-card">
-              <h3>Manufacturers & distributors</h3>
-              <p>Smaller operations that want better visibility into orders, inventory, and customer needs.</p>
-            </div>
-            <div className="card client-card">
-              <h3>Nonprofits & regional organizations</h3>
-              <p>Community-focused organizations that need to do more with limited staff while protecting sensitive data.</p>
+            <div className="confidential-ai-icon">
+              <Icons.Shield />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="services">
+      {/* Pricing Section - 4 Tiers */}
+      <section id="pricing" className="pricing">
         <div className="container">
           <div className="section-header">
-            <h2>What we do</h2>
-            <p>AI Ready PDX helps Portland-area organizations discover where AI actually fits in their business, then designs and implements practical solutions. We focus on small, high-impact wins that build confidence and momentum.</p>
+            <h2>Pricing</h2>
+            <p>Clear, practical pricing with options for every stage of your AI journey.</p>
           </div>
-          <div className="grid-5">
-            <div className="card service-card">
-              <h3>Strategy & roadmaps</h3>
-              <p>We start with how your business really works today. Then we identify high-ROI use cases, build a simple 6–12 month roadmap, and check in regularly as AI evolves.</p>
-            </div>
-            <div className="card service-card">
-              <h3>Automation & agents</h3>
-              <p>We design small internal tools and automations — from smarter scheduling and intake forms to AI-assisted report generation — using agentic coding tools, with experienced engineers reviewing every step.</p>
-            </div>
-            <div className="card service-card">
-              <h3>Marketing & outreach</h3>
-              <p>We use AI to refresh your website copy, improve your search and Answer Engine Optimization (AEO) visibility, draft content calendars, and help you set up ethical, targeted cold outreach.</p>
-            </div>
-            <div className="card service-card">
-              <h3>Training & enablement</h3>
-              <p>We run executive briefings, all-staff AI 101, and developer bootcamps so the people who will use AI day-to-day feel confident and safe.</p>
-            </div>
-            <div className="card service-card">
-              <h3>Data & private AI</h3>
-              <p>We help you bring together key data in platforms like Snowflake or Databricks, then build private AI assistants and environments — on-prem or in secure cloud — that respect your privacy requirements.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section id="approach" className="approach">
-        <div className="container">
-          <div className="section-header">
-            <h2>How we roll out AI — step by step</h2>
-            <p>Organizations can enter at different phases depending on where they are today.</p>
-          </div>
-          <div className="phase-timeline">
-            <div className="phase-item">
-              <div className="phase-number">1</div>
-              <div className="phase-content">
-                <h3>Digital foundation (your "front door")</h3>
-                <ul>
-                  <li>AI-assisted website refresh (clearer structure and messaging)</li>
-                  <li>AEO/GEO and local search review (are you visible in Google and ChatGPT/Gemini?)</li>
-                  <li>Simple chatbots and content calendars</li>
-                </ul>
-              </div>
-            </div>
-            <div className="phase-item">
-              <div className="phase-number">2</div>
-              <div className="phase-content">
-                <h3>Automation & outreach (growth layer)</h3>
-                <ul>
-                  <li>Smarter lead intake and follow-up workflows</li>
-                  <li>Cold outreach and email infrastructure using tools like SmartLead, with responsible targeting</li>
-                  <li>AI-drafted email sequences and call scripts</li>
-                </ul>
-              </div>
-            </div>
-            <div className="phase-item">
-              <div className="phase-number">3</div>
-              <div className="phase-content">
-                <h3>Operational efficiency (the internal brain)</h3>
-                <ul>
-                  <li>Process mapping and AI-powered automations across scheduling, invoicing, reporting</li>
-                  <li>Voice agents to answer and triage inbound calls for busy field teams</li>
-                </ul>
-              </div>
-            </div>
-            <div className="phase-item">
-              <div className="phase-number">4</div>
-              <div className="phase-content">
-                <h3>Sovereign AI & data infrastructure (the vault)</h3>
-                <ul>
-                  <li>On-prem or private-cloud AI environments for sensitive data</li>
-                  <li>Data warehousing in Snowflake/Databricks and private "ask your documents" assistants</li>
-                  <li>Executive and developer training so your team can safely operate and extend these tools</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Free Session Section */}
-      <section id="free-session" className="free-session">
-        <div className="container">
-          <div className="free-session-content">
-            <h2>Free AI Readiness Session — December 2025</h2>
-            <p>To help local organizations get ready for 2026, we're offering a limited number of free AI Readiness Sessions for Portland-area businesses and nonprofits that book before December 31, 2025.</p>
-            <div className="checklist">
-              <h3>In your free session, you'll get:</h3>
-              <ul>
-                <li>A short pre-call questionnaire so we understand how your organization runs</li>
-                <li>A 60–90 minute conversation with an experienced AI consultant</li>
-                <li>A 1-page AI Opportunities Snapshot with 3–5 specific ideas and rough ROI</li>
-                <li>A recommendation on whether on-prem, secure cloud, or simple SaaS tools make the most sense for you</li>
-                <li>Suggestions for quick wins you can tackle in the first 30–90 days of 2026</li>
-              </ul>
-            </div>
-            <p><em>There's no obligation to work with us beyond the session — you keep the roadmap and ideas either way.</em></p>
-            <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary">
-              Book Your Free Session
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Packages Section */}
-      <section id="packages" className="packages">
-        <div className="container">
-          <div className="section-header">
-            <h2>Packages & pricing</h2>
-            <p>We keep pricing straightforward and focused on practical outcomes. For early 2026, we're offering founding-client pricing to a limited number of local organizations.</p>
-          </div>
-          <div className="pricing-cards">
+          <div className="pricing-grid">
             <div className="pricing-card">
-              <h3>AI Essentials</h3>
-              <p className="price">From $500/month</p>
-              <p className="who-for">Small teams who want steady guidance and a few concrete AI wins each quarter.</p>
+              <h3>AI Readiness Session</h3>
+              <p className="price"><s>$500</s> <strong>$50</strong></p>
+              <p className="price-note">90% off for first 100 clients</p>
               <ul>
-                <li>Quarterly strategy & "What's new in AI" session (60–90 minutes)</li>
-                <li>Website & web presence review with a prioritized checklist</li>
-                <li>One "quick win" deliverable per quarter (chatbot, content calendar, or email sequence)</li>
-                <li>Reasonable email support for AI questions in between</li>
+                <li>60-90 minute consultation</li>
+                <li>Custom recommendations</li>
+                <li>AI Opportunities Snapshot document</li>
+              </ul>
+              <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary">Book Now</a>
+            </div>
+            <div className="pricing-card">
+              <h3>AI Training & Quick Wins</h3>
+              <p className="price">$1,500<span>/quarter</span></p>
+              <ul>
+                <li>90 minutes training (1 session or 2x 45-min)</li>
+                <li>Website & web presence review</li>
+                <li>One "quick win" deliverable per quarter</li>
+                <li>Email support between sessions</li>
               </ul>
               <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-secondary">Get Started</a>
             </div>
             <div className="pricing-card featured">
               <span className="pricing-badge">Most Popular</span>
-              <h3>AI Growth</h3>
-              <p className="price">From $1,000/month</p>
-              <p className="who-for">Organizations ready to move from experiments to meaningful automation and internal tools.</p>
+              <h3>AI Deep Dive</h3>
+              <p className="price">$2,500<span> one-time</span></p>
               <ul>
-                <li>Everything in AI Essentials</li>
-                <li>A second working session each quarter focused on implementation</li>
-                <li>One small automation or internal micro-tool per quarter</li>
-                <li>A quarterly mini training session for your team (live or remote, recorded)</li>
+                <li>2 hours: Deep dive into your business</li>
+                <li>2 hours: Recommendations presentation</li>
+                <li>Written roadmap/deliverable</li>
+                <li>Includes 90-minute training session</li>
+                <li>Execute yourself or engage us for projects</li>
               </ul>
               <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-primary">Get Started</a>
             </div>
             <div className="pricing-card">
-              <h3>Project-based engagements</h3>
-              <p className="price">Custom pricing</p>
-              <p className="who-for">For specific initiatives and one-time projects.</p>
+              <h3>Execution & Projects</h3>
+              <p className="price">Custom</p>
+              <p className="price-note">Variable based on scope</p>
               <ul>
-                <li><strong>AI Kickstart Sprint</strong> — from $3,500<br/>A focused 4–6 week engagement to create your AI roadmap and launch your first pilot.</li>
-                <li><strong>Automation & Agentic Coding Sprint</strong> — from $8,000<br/>A custom internal tool or workflow automation built using agentic coding tools.</li>
-                <li><strong>On-Prem AI Appliance</strong> — from $10,000 + $1,000/month<br/>A local AI inference box installed and supported on your network.</li>
+                <li><strong>Managed Services:</strong> We run your marketing—content, posting, analytics</li>
+                <li><strong>Custom Solutions:</strong> AI applications and integrations</li>
+                <li><strong>AI Kickstart Sprint:</strong> Roadmap + first pilot</li>
+                <li><strong>On-Prem AI:</strong> Air-gapped deployment</li>
               </ul>
               <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="btn btn-secondary">Let's Talk</a>
             </div>
           </div>
-          <p style={{textAlign: 'center', marginTop: '2rem', color: 'var(--color-text-light)'}}>
-            <em>Founding-client pricing is available for organizations that start in early 2026.</em>
-          </p>
         </div>
       </section>
 
-      {/* Private AI Section */}
-      <section id="private-ai" className="private-ai">
+      {/* Approach Section - Simplified */}
+      <section id="approach" className="approach">
         <div className="container">
           <div className="section-header">
-            <h2>Prefer your AI off the public internet?</h2>
-            <p>Some organizations can't put sensitive data into public AI tools. We've worked in those environments for years.</p>
+            <h2>Our Approach</h2>
+            <p>A clear path from assessment to results.</p>
           </div>
-          <div className="private-ai-features">
-            <div className="private-ai-feature">
-              <h3>On-prem AI appliances</h3>
-              <p>Installed on your network, for local inference and private document Q&A. E.g., NVIDIA DGX Spark-class boxes with 128GB unified memory — "desktop supercomputer" capabilities without sending data to external clouds.</p>
+          <div className="approach-phases">
+            <div className="approach-phase">
+              <div className="phase-icon">
+                <Icons.Search />
+              </div>
+              <h3>Assess</h3>
+              <ul>
+                <li>AI Readiness Assessment</li>
+                <li>Website AI Audit (SEO, AEO, GEO)</li>
+                <li>Opportunity identification</li>
+                <li>Technology stack review</li>
+                <li>Privacy & security evaluation</li>
+              </ul>
             </div>
-            <div className="private-ai-feature">
-              <h3>Locked-down cloud environments</h3>
-              <p>Azure and AWS environments with private networking and clear policies. Your data stays in controlled, compliant environments that you manage.</p>
+            <div className="approach-phase">
+              <div className="phase-icon">
+                <Icons.Settings />
+              </div>
+              <h3>Implement</h3>
+              <ul>
+                <li>Chatbots & voice agents</li>
+                <li>Content automation tools</li>
+                <li>Cold outreach systems</li>
+                <li>Custom AI applications</li>
+                <li>Secure on-prem AI</li>
+              </ul>
             </div>
-            <div className="private-ai-feature">
-              <h3>Training and guardrails</h3>
-              <p>We train your staff on what's safe to do with AI tools. Clear policies ensure everyone knows what stays internal and what can be used with external services.</p>
+            <div className="approach-phase">
+              <div className="phase-icon">
+                <Icons.Users />
+              </div>
+              <h3>Train</h3>
+              <ul>
+                <li>Executive AI briefings</li>
+                <li>Team training sessions</li>
+                <li>Ongoing strategy support</li>
+                <li>Quarterly State of AI updates</li>
+              </ul>
             </div>
-          </div>
-          <div style={{marginTop: '2rem', textAlign: 'center'}}>
-            <p style={{marginBottom: '1rem'}}>
-              <strong>Benefits of Sovereign AI:</strong> Own your intelligence instead of renting it. Predictable costs (CapEx vs unpredictable token bills). Regulatory and compliance benefits for law, medical, and finance clients.
-            </p>
-            <p><em>"Your data never leaves your machine."</em></p>
           </div>
         </div>
       </section>
@@ -475,9 +591,9 @@ function App() {
               </div>
             </div>
             <div className="faq-item">
-              <h3>What does a Free AI Readiness Session cover?</h3>
+              <h3>What does an AI Readiness Session cover?</h3>
               <div className="faq-answer">
-                <p>In our 60–90 minute session, we review how your organization runs today, identify 3–5 specific AI opportunities with rough ROI estimates, recommend whether on-prem, cloud, or simple SaaS tools make sense for you, and provide a written summary you can share with your team.</p>
+                <p>In our 60–90 minute session (just $50 for the first 100 clients), we review how your organization runs today, identify 3–5 specific AI opportunities with rough ROI estimates, recommend whether on-prem, cloud, or simple SaaS tools make sense for you, and provide a written AI Opportunities Snapshot you can share with your team.</p>
               </div>
             </div>
             <div className="faq-item">
@@ -583,7 +699,7 @@ function App() {
                   checked={formData.freeSession}
                   onChange={handleInputChange}
                 />
-                <label htmlFor="freeSession">I'm interested in a free December 2025 AI Readiness Session</label>
+                <label htmlFor="freeSession">I'm interested in a $50 AI Readiness Session (90% off for first 100 clients)</label>
               </div>
               <button type="submit" className="btn btn-primary form-submit">
                 Send message
