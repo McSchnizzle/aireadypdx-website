@@ -19,6 +19,14 @@
 
   /* Transitions */
   --transition: all 0.3s ease;
+
+  /* Chat Widget */
+  --chat-width: 380px;
+  --chat-height: 520px;
+  --chat-trigger-size: 60px;
+  --chat-border-radius: 16px;
+  --chat-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --chat-z-index: 9999;
 }
 
 * {
